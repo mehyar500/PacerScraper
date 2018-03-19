@@ -46,9 +46,7 @@ request.get(pacerURL, function(error, response, body){
 
 
 app.get("/", function(req, res) {
-
-  res.json(linksObj);
-
+  
 });
 
 app.listen(PORT, function() {
