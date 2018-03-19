@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,10 @@
   },
   "homepage": "https://github.com/mehyar500/PacerScraper#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
-    "handlebars": "^4.0.11",
     "jquery": "^3.3.1",
+    "nodemon": "^1.17.1",
     "request": "^2.83.0"
   }
 }

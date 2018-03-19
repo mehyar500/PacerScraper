@@ -16,12 +16,16 @@ app.use(express.static("public"));
 let pacerURL = "https://www.pacer.gov/announce.html";
 let linksTextArray = [];
 let linksArray = [];
+let linksObj = {};
 
 request.get(pacerURL, function(error, response, body){
   let $ = cheerio.load(body);
 
   if (error) {
-    console.log(error);
+    res.json({
+      confirmation: 'fail',
+      message: error
+    });
   } else {
     // console.log(body);
     $(".linktxt").each(function(index, link) {
@@ -41,8 +45,9 @@ request.get(pacerURL, function(error, response, body){
 });
 
 
-
 app.get("/", function(req, res) {
+
+  res.json(linksObj);
 
 });
 
