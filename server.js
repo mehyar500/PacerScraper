@@ -2,8 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require('request');
 const cheerio = require('cheerio');
-const path = require("path");
-const fs = require("fs");
 const PORT = 3000;
 const app = express();
 
